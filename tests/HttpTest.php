@@ -112,18 +112,13 @@ class HttpTest extends TestCase
         );
 
         $this->assertEquals(
-            306,
-            Http::RESERVED
-        );
-
-        $this->assertEquals(
             307,
             Http::TEMPORARY_REDIRECT
         );
 
         $this->assertEquals(
             308,
-            Http::PERMANENTLY_REDIRECT
+            Http::PERMANENT_REDIRECT
         );
 
         $this->assertEquals(
@@ -193,12 +188,12 @@ class HttpTest extends TestCase
 
         $this->assertEquals(
             413,
-            Http::REQUEST_ENTITY_TOO_LARGE
+            Http::PAYLOAD_TOO_LARGE
         );
 
         $this->assertEquals(
             414,
-            Http::REQUEST_URI_TOO_LONG
+            Http::URI_TOO_LONG
         );
 
         $this->assertEquals(
@@ -208,7 +203,7 @@ class HttpTest extends TestCase
 
         $this->assertEquals(
             416,
-            Http::REQUESTED_RANGE_NOT_SATISFIABLE
+            Http::RANGE_NOT_SATISFIABLE
         );
 
         $this->assertEquals(
@@ -219,6 +214,11 @@ class HttpTest extends TestCase
         $this->assertEquals(
             418,
             Http::I_AM_A_TEAPOT
+        );
+
+        $this->assertEquals(
+            419,
+            Http::PAGE_EXPIRED
         );
 
         $this->assertEquals(
@@ -267,8 +267,68 @@ class HttpTest extends TestCase
         );
 
         $this->assertEquals(
+            440,
+            Http::LOGIN_TIME_OUT
+        );
+
+        $this->assertEquals(
+            444,
+            Http::NO_RESPONSE
+        );
+
+        $this->assertEquals(
+            449,
+            Http::RETRY_WITH
+        );
+
+        $this->assertEquals(
+            450,
+            Http::BLOCKED_BY_WINDOWS_PARENTAL_CONTROL
+        );
+
+        $this->assertEquals(
             451,
             Http::UNAVAILABLE_FOR_LEGAL_REASONS
+        );
+
+        $this->assertEquals(
+            460,
+            Http::CLIENT_CLOSED_THE_CONNECTION
+        );
+
+        $this->assertEquals(
+            463,
+            Http::X_FORWARDED_FOR_TOO_LARGE
+        );
+
+        $this->assertEquals(
+            494,
+            Http::REQUEST_HEADER_TOO_LARGE
+        );
+
+        $this->assertEquals(
+            495,
+            Http::SSL_CERTIFICATE_ERROR
+        );
+
+        $this->assertEquals(
+            496,
+            Http::SSL_CERTIFICATE_REQUIRED
+        );
+
+        $this->assertEquals(
+            497,
+            Http::HTTP_REQUEST_SENT_TO_HTTPS_PORT
+        );
+
+        $this->assertEquals(
+            498,
+            Http::INVALID_TOKEN
+        );
+
+        $this->assertEquals(
+            499,
+            Http::TOKEN_REQUIRED
         );
 
         $this->assertEquals(
@@ -298,12 +358,12 @@ class HttpTest extends TestCase
 
         $this->assertEquals(
             505,
-            Http::VERSION_NOT_SUPPORTED
+            Http::HTTP_VERSION_NOT_SUPPORTED
         );
 
         $this->assertEquals(
             506,
-            Http::VARIANT_ALSO_NEGOTIATES_EXPERIMENTAL
+            Http::VARIANT_ALSO_NEGOTIATES
         );
 
         $this->assertEquals(
@@ -317,6 +377,11 @@ class HttpTest extends TestCase
         );
 
         $this->assertEquals(
+            509,
+            Http::BANDWIDTH_LIMIT_EXCEEDED
+        );
+
+        $this->assertEquals(
             510,
             Http::NOT_EXTENDED
         );
@@ -324,6 +389,61 @@ class HttpTest extends TestCase
         $this->assertEquals(
             511,
             Http::NETWORK_AUTHENTICATION_REQUIRED
+        );
+
+        $this->assertEquals(
+            520,
+            Http::WEB_SERVER_RETURNED_AN_UNKNOWN_ERROR
+        );
+
+        $this->assertEquals(
+            521,
+            Http::WEB_SERVER_IS_DOWN
+        );
+
+        $this->assertEquals(
+            522,
+            Http::CONNECTION_TIMED_OUT
+        );
+
+        $this->assertEquals(
+            523,
+            Http::ORIGIN_IS_UNREACHABLE
+        );
+
+        $this->assertEquals(
+            524,
+            Http::A_TIMEOUT_OCCURRED
+        );
+
+        $this->assertEquals(
+            525,
+            Http::SSL_HANDSHAKE_FAILED
+        );
+
+        $this->assertEquals(
+            526,
+            Http::INVALID_SSL_CERTIFICATE
+        );
+
+        $this->assertEquals(
+            527,
+            Http::RAILGUN_ERROR
+        );
+
+        $this->assertEquals(
+            529,
+            Http::SITE_IS_OVERLOADED
+        );
+
+        $this->assertEquals(
+            530,
+            Http::SITE_IS_FROZEN
+        );
+
+        $this->assertEquals(
+            598,
+            Http::NETWORK_READ_TIMEOUT_ERROR
         );
     }
 }

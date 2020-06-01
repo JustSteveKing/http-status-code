@@ -74,6 +74,11 @@ class Http
     /**
      * @var int
      */
+    public const THIS_IS_FINE = 218;
+
+    /**
+     * @var int
+     */
     public const IM_USED = 226;
 
     /**
@@ -109,17 +114,12 @@ class Http
     /**
      * @var int
      */
-    public const RESERVED = 306;
-
-    /**
-     * @var int
-     */
     public const TEMPORARY_REDIRECT = 307;
 
     /**
      * @var int
      */
-    public const PERMANENTLY_REDIRECT = 308;
+    public const PERMANENT_REDIRECT = 308;
 
     /**
      * @var int
@@ -189,12 +189,12 @@ class Http
     /**
      * @var int
      */
-    public const REQUEST_ENTITY_TOO_LARGE = 413;
+    public const PAYLOAD_TOO_LARGE = 413;
 
     /**
      * @var int
      */
-    public const REQUEST_URI_TOO_LONG = 414;
+    public const URI_TOO_LONG = 414;
 
     /**
      * @var int
@@ -204,7 +204,7 @@ class Http
     /**
      * @var int
      */
-    public const REQUESTED_RANGE_NOT_SATISFIABLE = 416;
+    public const RANGE_NOT_SATISFIABLE = 416;
 
     /**
      * @var int
@@ -215,6 +215,11 @@ class Http
      * @var int
      */
     public const I_AM_A_TEAPOT = 418;
+
+    /**
+     * @int
+     */
+    public const PAGE_EXPIRED = 419;
 
     /**
      * @var int
@@ -264,7 +269,67 @@ class Http
     /**
      * @var int
      */
+    public const LOGIN_TIME_OUT = 440;
+
+    /**
+     * @var int
+     */
+    public const NO_RESPONSE = 444;
+
+    /**
+     * @var int
+     */
+    public const RETRY_WITH = 449;
+
+    /**
+     * @var int
+     */
+    public const BLOCKED_BY_WINDOWS_PARENTAL_CONTROL = 450;
+
+    /**
+     * @var int
+     */
     public const UNAVAILABLE_FOR_LEGAL_REASONS = 451;
+
+    /**
+     * @var int
+     */
+    public const CLIENT_CLOSED_THE_CONNECTION = 460;
+
+    /**
+     * @var int
+     */
+    public const X_FORWARDED_FOR_TOO_LARGE = 463;
+
+    /**
+     * @var int
+     */
+    public const REQUEST_HEADER_TOO_LARGE = 494;
+
+    /**
+     * @var int
+     */
+    public const SSL_CERTIFICATE_ERROR = 495;
+
+    /**
+     * @var int
+     */
+    public const SSL_CERTIFICATE_REQUIRED = 496;
+
+    /**
+     * @var int
+     */
+    public const HTTP_REQUEST_SENT_TO_HTTPS_PORT = 497;
+
+    /**
+     * @var int
+     */
+    public const INVALID_TOKEN = 498;
+
+    /**
+     * @var int
+     */
+    public const TOKEN_REQUIRED = 499;
 
     /**
      * @var int
@@ -294,12 +359,12 @@ class Http
     /**
      * @var int
      */
-    public const VERSION_NOT_SUPPORTED = 505;
+    public const HTTP_VERSION_NOT_SUPPORTED = 505;
 
     /**
      * @var int
      */
-    public const VARIANT_ALSO_NEGOTIATES_EXPERIMENTAL = 506;
+    public const VARIANT_ALSO_NEGOTIATES = 506;
 
     /**
      * @var int
@@ -314,10 +379,70 @@ class Http
     /**
      * @var int
      */
+    public const BANDWIDTH_LIMIT_EXCEEDED = 509;
+
+    /**
+     * @var int
+     */
     public const NOT_EXTENDED = 510;
 
     /**
      * @var int
      */
     public const NETWORK_AUTHENTICATION_REQUIRED = 511;
+
+    /**
+     * @var int
+     */
+    public const WEB_SERVER_RETURNED_AN_UNKNOWN_ERROR = 520;
+
+    /**
+     * @var int
+     */
+    public const WEB_SERVER_IS_DOWN = 521;
+
+    /**
+     * @var int
+     */
+    public const CONNECTION_TIMED_OUT = 522;
+
+    /**
+     * @var int
+     */
+    public const ORIGIN_IS_UNREACHABLE = 523;
+
+    /**
+     * @var int
+     */
+    public const A_TIMEOUT_OCCURRED = 524;
+
+    /**
+     * @var int
+     */
+    public const SSL_HANDSHAKE_FAILED = 525;
+
+    /**
+     * @var int
+     */
+    public const INVALID_SSL_CERTIFICATE = 526;
+
+    /**
+     * @var int
+     */
+    public const RAILGUN_ERROR = 527;
+
+    /**
+     * @var int
+     */
+    public const SITE_IS_OVERLOADED = 529;
+
+    /**
+     * @var int
+     */
+    public const SITE_IS_FROZEN = 530;
+
+    /**
+     * @var
+     */
+    public const NETWORK_READ_TIMEOUT_ERROR = 598;
 }

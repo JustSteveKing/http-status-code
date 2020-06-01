@@ -34,6 +34,7 @@ Http::RESET_CONTENT; // returns 205
 Http::PARTIAL_CONTENT; // returns 206
 Http::MULTI_STATUS; // returns 207
 Http::ALREADY_REPORTED; // returns 208
+Http::THIS_IS_FINE; // returns 218
 Http::IM_USED; // returns 226
 
 Http::MULTIPLE_CHOICES; // returns 300
@@ -42,10 +43,8 @@ Http::FOUND; // return 302
 Http::SEE_OTHER; // return 303
 Http::NOT_MODIFIED; // return 304
 Http::USE_PROXY; // returns 305
-Http::RESERVED; // return 306
 Http::TEMPORARY_REDIRECT; // returns 307
-Http::TEMPORARY_REDIRECT; // returns 307
-Http::PERMANENTLY_REDIRECT; // returns 308
+Http::PERMANENT_REDIRECT; // returns 308
 
 Http::BAD_REQUEST; // returns 400
 Http::UNAUTHORIZED; // returns 401
@@ -60,12 +59,13 @@ Http::CONFLICT; // returns 409
 Http::GONE; // returns 410
 Http::LENGTH_REQUIRED; // returns 411
 Http::PRECONDITION_FAILED; // returns 412
-Http::REQUEST_ENTITY_TOO_LARGE; // returns 413
-Http::REQUEST_URI_TOO_LONG; // returns 414
+Http::PAYLOAD_TOO_LARGE; // returns 413
+Http::URI_TOO_LONG; // returns 414
 Http::UNSUPPORTED_MEDIA_TYPE; // returns 415
-Http::REQUESTED_RANGE_NOT_SATISFIABLE; // returns 416
+Http::RANGE_NOT_SATISFIABLE; // returns 416
 Http::EXPECTATION_FAILED; // returns 417
 Http::I_AM_A_TEAPOT; // returns 418
+Http::PAGE_EXPIRED; // returns 419
 Http::MISDIRECTED_REQUEST; // returns 421
 Http::UNPROCESSABLE_ENTITY; // returns 422
 Http::LOCKED; // returns 423
@@ -75,17 +75,41 @@ Http::UPGRADE_REQUIRED; // returns 426
 Http::PRECONDITION_REQUIRED; // returns 428
 Http::TOO_MANY_REQUESTS; // returns 429
 Http::REQUEST_HEADER_FIELDS_TOO_LARGE; // returns 431
+Http::LOGIN_TIME_OUT; // returns 440
+Http::NO_RESPONSE; // returns 444
+Http::RETRY_WITH; // returns 449
+Http::BLOCKED_BY_WINDOWS_PARENTAL_CONTROL; // returns 450
 Http::UNAVAILABLE_FOR_LEGAL_REASONS; // returns 451
+Http::CLIENT_CLOSED_THE_CONNECTION; // returns 460
+Http::X_FORWARDED_FOR_TOO_LARGE; // returns 463
+Http::REQUEST_HEADER_TOO_LARGE; // returns 494;
+Http::SSL_CERTIFICATE_ERROR; // returns 495
+Http::SSL_CERTIFICATE_REQUIRED; // returns 496
+Http::HTTP_REQUEST_SENT_TO_HTTPS_PORT; // returns 497
+Http::INVALID_TOKEN; // returns 498
+Http::TOKEN_REQUIRED; // returns 499
 
 Http::INTERNAL_SERVER_ERROR; // returns 500
 Http::NOT_IMPLEMENTED; // returns 501
 Http::BAD_GATEWAY; // returns 502
 Http::SERVICE_UNAVAILABLE; // returns 503
 Http::GATEWAY_TIMEOUT; // returns 504
-Http::VERSION_NOT_SUPPORTED; // returns 505
-Http::VARIANT_ALSO_NEGOTIATES_EXPERIMENTAL; // returns 506
+Http::HTTP_VERSION_NOT_SUPPORTED; // returns 505
+Http::VARIANT_ALSO_NEGOTIATES; // returns 506
 Http::INSUFFICIENT_STORAGE; // returns 507
 Http::LOOP_DETECTED; // returns 508
+Http::BANDWIDTH_LIMIT_EXCEEDED; // returns 509
 Http::NOT_EXTENDED; // returns 510
 Http::NETWORK_AUTHENTICATION_REQUIRED; // returns 511
+Http::WEB_SERVER_RETURNED_AN_UNKNOWN_ERROR; // returns 520
+Http::WEB_SERVER_IS_DOWN; // returns 521
+Http::CONNECTION_TIMED_OUT; // returns 522
+Http::ORIGIN_IS_UNREACHABLE; // returns 523
+Http::A_TIMEOUT_OCCURRED; // returns 524
+Http::SSL_HANDSHAKE_FAILED; // returns 525
+Http::INVALID_SSL_CERTIFICATE; // returns 526
+Http::RAILGUN_ERROR; // returns 527
+Http::SITE_IS_OVERLOADED; // returns 529
+Http::SITE_IS_FROZEN; // returns 530
+Http::NETWORK_READ_TIMEOUT_ERROR; // returns 598
 ```
