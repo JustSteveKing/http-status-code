@@ -2,6 +2,8 @@
 
 A simple class to return correct status codes for http responses.
 
+All codes (where applicable) have been taken from [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+
 ## Installation
 
 Using composer:
