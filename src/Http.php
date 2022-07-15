@@ -102,9 +102,9 @@ enum Http: int
     case NETWORK_READ_TIMEOUT_ERROR = 598;
 
     /**
-     * @return int|string
+     * @return int
      */
-    public function __invoke(): int|string
+    public function __invoke(): int
     {
         return $this->value;
     }
@@ -112,11 +112,11 @@ enum Http: int
     /**
      * @param  string  $name
      * @param  mixed  $args
-     * @return int|string
+     * @return int
      *
      * @throws UndefinedCaseError
      */
-    public static function __callStatic(string $name, mixed $args): int|string
+    public static function __callStatic(string $name, mixed $args): int
     {
         $cases = Http::cases();
 
