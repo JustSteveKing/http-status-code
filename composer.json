@@ -1,56 +1,45 @@
 {
-    "name": "juststeveking/http-status-code",
-    "description": "A simple class to return correct status codes for http responses",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "role": "Developer",
-            "name": "Steve McDougall",
-            "email": "juststevemcd@gmail.com",
-            "homepage": "https://www.juststeveking.uk"
-        }
-    ],
-    "require": {
-        "php": "^8.0"
-    },
-    "config": {
-        "sort-packages": true,
-        "optimize-autoloader": true
-    },
-    "autoload": {
-        "psr-4": {
-            "JustSteveKing\\StatusCode\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "JustSteveKing\\Tests\\StatusCode\\": "tests/"
-        }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.1",
-        "squizlabs/php_codesniffer": "^3.5",
-        "thecodingmachine/phpstan-safe-rule": "^1.0",
-        "vimeo/psalm": "^3.11"
-    },
-    "scripts": {
-        "preflight:analyze": [
-            "@preflight:analyze:phpstan",
-            "@preflight:analyze:psalm"
-        ],
-        "preflight:analyze:phpstan": "phpstan analyse -c phpstan.neon.dist --no-progress",
-        "preflight:analyze:psalm": "psalm --diff --diff-methods --show-info=true --config=psalm.xml.dist",
-        "preflight:test": "phpunit",
-        "preflight:test:coverage:ci": "phpunit --coverage-clover build/logs/clover.xml",
-        "preflight:test:coverage:html": "phpunit --coverage-html build/coverage"
-    },
-    "scripts-descriptions": {
-        "preflight:analyze": "Performs static analysis on the code base.",
-        "preflight:analyze:phpstan": "Runs the PHPStan static analyzer.",
-        "preflight:analyze:psalm": "Runs the Psalm static analyzer.",
-        "preflight:test": "Runs the full unit test suite.",
-        "preflight:test:coverage:ci": "Runs the unit test suite and generates a Clover coverage report.",
-        "preflight:test:coverage:html": "Runs the unit tests suite and generates an HTML coverage report."
+  "name": "juststeveking/http-status-code",
+  "description": "A simple class to return correct status codes for http responses",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Steve McDougall",
+      "email": "juststevemcd@gmail.com",
+      "homepage": "https://www.juststeveking.uk"
     }
+  ],
+  "require": {
+    "php": "^8.1"
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "autoload": {
+    "psr-4": {
+      "JustSteveKing\\StatusCode\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JustSteveKing\\Tests\\StatusCode\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "laravel/pint": "^0.2.3",
+    "phpunit/phpunit": "^9.5.4",
+    "thecodingmachine/phpstan-safe-rule": "^1.0"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit",
+    "analyse": "./vendor/bin/phpstan analyse --memory-limit=256m",
+    "prepare": [
+      "./vendor/bin/phpunit",
+      "./vendor/bin/pint",
+      "./vendor/bin/phpstan analyse --memory-limit=256m"
+    ]
+  }
 }
