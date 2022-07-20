@@ -6,13 +6,109 @@ namespace JustSteveKing\StatusCode;
 
 use JustSteveKing\StatusCode\Exceptions\UndefinedCaseError;
 
+/**
+ * @method CONTINUE(): int
+ * @method SWITCHING_PROTOCOLS(): int
+ * @method PROCESSING(): int
+ * @method EARLY_HINTS(): int
+ * @method OK(): int
+ * @method CREATED(): int
+ * @method ACCEPTED(): int
+ * @method NON_AUTHORITATIVE_INFORMATION(): int
+ * @method NO_CONTENT(): int
+ * @method RESET_CONTENT(): int
+ * @method PARTIAL_CONTENT(): int
+ * @method MULTI_STATUS(): int
+ * @method ALREADY_REPORTED(): int
+ * @method THIS_IS_FINE(): int
+ * @method IM_USED(): int
+ * @method MULTIPLE_CHOICES(): int
+ * @method MOVED_PERMANENTLY(): int
+ * @method FOUND(): int
+ * @method SEE_OTHER(): int
+ * @method NOT_MODIFIED(): int
+ * @method USE_PROXY(): int
+ * @method TEMPORARY_REDIRECT(): int
+ * @method PERMANENT_REDIRECT(): int
+ * @method BAD_REQUEST(): int
+ * @method UNAUTHORIZED(): int
+ * @method PAYMENT_REQUIRED(): int
+ * @method FORBIDDEN(): int
+ * @method NOT_FOUND(): int
+ * @method METHOD_NOT_ALLOWED(): int
+ * @method NOT_ACCEPTABLE(): int
+ * @method PROXY_AUTHENTICATION_REQUIRED(): int
+ * @method REQUEST_TIMEOUT(): int
+ * @method CONFLICT(): int
+ * @method GONE(): int
+ * @method LENGTH_REQUIRED(): int
+ * @method PRECONDITION_FAILED(): int
+ * @method PAYLOAD_TOO_LARGE(): int
+ * @method URI_TOO_LONG(): int
+ * @method UNSUPPORTED_MEDIA_TYPE(): int
+ * @method RANGE_NOT_SATISFIABLE(): int
+ * @method EXPECTATION_FAILED(): int
+ * @method I_AM_A_TEAPOT(): int
+ * @method PAGE_EXPIRED(): int
+ * @method MISDIRECTED_REQUEST(): int
+ * @method UNPROCESSABLE_ENTITY(): int
+ * @method LOCKED(): int
+ * @method FAILED_DEPENDENCY(): int
+ * @method TOO_EARLY(): int
+ * @method UPGRADE_REQUIRED(): int
+ * @method PRECONDITION_REQUIRED(): int
+ * @method TOO_MANY_REQUESTS(): int
+ * @method REQUEST_HEADER_FIELDS_TOO_LARGE(): int
+ * @method LOGIN_TIME_OUT(): int
+ * @method NO_RESPONSE(): int
+ * @method RETRY_WITH(): int
+ * @method BLOCKED_BY_WINDOWS_PARENTAL_CONTROL(): int
+ * @method UNAVAILABLE_FOR_LEGAL_REASONS(): int
+ * @method CLIENT_CLOSED_THE_CONNECTION(): int
+ * @method X_FORWARDED_FOR_TOO_LARGE(): int
+ * @method REQUEST_HEADER_TOO_LARGE(): int
+ * @method SSL_CERTIFICATE_ERROR(): int
+ * @method SSL_CERTIFICATE_REQUIRED(): int
+ * @method HTTP_REQUEST_SENT_TO_HTTPS_PORT(): int
+ * @method INVALID_TOKEN(): int
+ * @method TOKEN_REQUIRED(): int
+ * @method INTERNAL_SERVER_ERROR(): int
+ * @method NOT_IMPLEMENTED(): int
+ * @method BAD_GATEWAY(): int
+ * @method SERVICE_UNAVAILABLE(): int
+ * @method GATEWAY_TIMEOUT(): int
+ * @method HTTP_VERSION_NOT_SUPPORTED(): int
+ * @method VARIANT_ALSO_NEGOTIATES(): int
+ * @method INSUFFICIENT_STORAGE(): int
+ * @method LOOP_DETECTED(): int
+ * @method BANDWIDTH_LIMIT_EXCEEDED(): int
+ * @method NOT_EXTENDED(): int
+ * @method NETWORK_AUTHENTICATION_REQUIRED(): int
+ * @method WEB_SERVER_RETURNED_AN_UNKNOWN_ERROR(): int
+ * @method WEB_SERVER_IS_DOWN(): int
+ * @method CONNECTION_TIMED_OUT(): int
+ * @method ORIGIN_IS_UNREACHABLE(): int
+ * @method A_TIMEOUT_OCCURRED(): int
+ * @method SSL_HANDSHAKE_FAILED(): int
+ * @method INVALID_SSL_CERTIFICATE(): int
+ * @method RAILGUN_ERROR(): int
+ * @method SITE_IS_OVERLOADED(): int
+ * @method SITE_IS_FROZEN(): int
+ * @method NETWORK_READ_TIMEOUT_ERROR(): int
+ */
 enum Http: int
 {
+    /**
+     * @see https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#1xx_informational_response
+     */
     case CONTINUE = 100;
     case SWITCHING_PROTOCOLS = 101;
     case PROCESSING = 102;
     case EARLY_HINTS = 103;
 
+    /**
+     * @see https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_success
+     */
     case OK = 200;
     case CREATED = 201;
     case ACCEPTED = 202;
@@ -25,6 +121,9 @@ enum Http: int
     case THIS_IS_FINE = 218;
     case IM_USED = 226;
 
+    /**
+     * @see https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_redirection
+     */
     case MULTIPLE_CHOICES = 300;
     case MOVED_PERMANENTLY = 301;
     case FOUND = 302;
@@ -34,6 +133,9 @@ enum Http: int
     case TEMPORARY_REDIRECT = 307;
     case PERMANENT_REDIRECT = 308;
 
+    /**
+     * @see https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_client_errors
+     */
     case BAD_REQUEST = 400;
     case UNAUTHORIZED = 401;
     case PAYMENT_REQUIRED = 402;
@@ -77,6 +179,9 @@ enum Http: int
     case INVALID_TOKEN = 498;
     case TOKEN_REQUIRED = 499;
 
+    /**
+     * @see https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#5xx_server_errors
+     */
     case INTERNAL_SERVER_ERROR = 500;
     case NOT_IMPLEMENTED = 501;
     case BAD_GATEWAY = 502;
