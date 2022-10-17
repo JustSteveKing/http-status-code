@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class HttpTest extends TestCase
 {
-    public function testCorrectStatusCodesAreReturned()
+    public function testCorrectStatusCodesAreReturned(): void
     {
         $this->assertEquals(
             100,
@@ -445,5 +445,13 @@ class HttpTest extends TestCase
             598,
             Http::NETWORK_READ_TIMEOUT_ERROR()
         );
+    }
+
+    public function testErrorIsThrownForInvalidStatusCode(): void
+    {
+        $this->expectError();
+        $this->expectErrorMessage(sprintf('Undefined constant %s::INVALID', Http::class));
+
+        Http::INVALID();
     }
 }
