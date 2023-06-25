@@ -11,7 +11,7 @@ All codes (where applicable) have been taken from [Wikipedia](https://en.wikiped
 Using composer:
 
 ```bash
-$ composer require juststeveking/http-status-code
+composer require juststeveking/http-status-code
 ```
 
 You are then free to use it as needed within your projects.
